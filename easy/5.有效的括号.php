@@ -8,10 +8,10 @@ class Solution
      */
     public function isValid($s)
     {
-        $filter = ['(' => ')', ')' => '(', '{' => '}', '}' => '{', '[' => ']', ']' => '['];
         if ($s == '') {
             return true;
         }
+        $filter = ['(' => ')', ')' => '(', '{' => '}', '}' => '{', '[' => ']', ']' => '['];
         $list = [];
         foreach (str_split($s) as &$value) {
             if (!isset($filter[$value])) {
